@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>iScroll demo: snap</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <script src="//cdn.bootcss.com/iScroll/5.2.0/iscroll.js"></script>
+    <script src="../js/demoUtils.js"></script>
+    <style>
+      *{box-sizing: border-box;}
+      body,ul,li{padding:0;margin:0;border:0;}
+      body{font-size:12px;overflow:hidden;}
+      #header{
+        position:absolute;z-index:2;top:0;left:0;width:100%;height:45px;line-height:45px;
+        background:#cd235c;padding:0;color:#eee;font-size:20px;text-align:center;font-weight:bold;
+      }
+      #footer{
+        position:absolute;z-index:2;bottom:0;left:0;width:100%;height:48px;background:#444;padding:0;border-top:1px solid #444;
+      }
+      #wrapper{
+        position:absolute;z-index:1;top:45px;bottom:48px;left:0;width:100%;background:#ccc;overflow:hidden;
+      }
+      #scroller{
+        position:absolute;z-index:1;width:2000px;height:2000px;
+        background:#a00;transform:translateZ(0);user-select:none;
+      }
+      #scroller ul{
+        list-style:none;padding:0;margin:0;width:100%;text-align:center;
+      }
+      #scroller li{display:block;float:left;width:200px;height:200px;border-right:1px solid #ccc;
+      border-bottom:1px solid #ccc;background-color:#fafafa;font-size:14px;}
+    </style>
+    <script>
+      var myScroll;
+      function loaded() {
+        myScroll = new IScroll('#wrapper', {
+          scrollX: true,
+          scrollY: true,
+          momentum: false,
+          snap: true
+        });
+      }
+      document.addEventListener('touchmove', function (e){
+        e.preventDefault();
+      })
+    </script>
+  </head>
+  <body onload="loaded()">
+    <div id="header">iScroll</div>
+
+    <div id="wrapper">
+      <div id="scroller">
+        <ul>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+          <li>Cell</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+  </body>
+</html>
